@@ -31,6 +31,10 @@
 				},
 				"groups": [
 					{
+						"group": "The Basics",
+						"pages": ["bot/perms/bot"]
+					},
+					{
 						"group": "Miscellaneous",
 						"pages": ["bot/misc/variables"]
 					}
@@ -46,6 +50,8 @@
 
 	},
 	"footer": {
-		
+		"socials": {
+			"github": "https://github.com/FyreCorp"
+		}
 	}
 }
