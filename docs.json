@@ -3,9 +3,14 @@
 	"theme": "mint",
 	"name": "Fyre Bot",
 	"colors": {
-		"dark": "#1B95C5",
+		"dark": "#198BB8",
 		"light": "#1FA9E1",
 		"primary": "#1FA9E1"
+	},
+	"seo": {
+		"metatags": {
+			"theme-color": "#1FA9E1"
+		}
 	},
 	"banner": {
 		"content": "Fyre Bot is currently in Early Access. Please report any bugs or give any feedback to @thefallenspirit on Discord."
