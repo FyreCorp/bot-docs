@@ -3,8 +3,6 @@
 	"theme": "mint",
 	"name": "Fyre Bot",
 	"colors": {
-		"dark": "#1FA9E1",
-		"light": "#1FA9E1",
 		"primary": "#1FA9E1"
 	},
 	"banner": {
