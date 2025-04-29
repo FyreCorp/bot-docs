@@ -1,0 +1,23 @@
+---
+icon: 'terminal'
+title: 'Syntax'
+description: "An explanation of Fyre's text command syntax and how to use text commands."
+---
+
+## Default Prefix
+Fyre's default prefix is `>`. If you want to change the prefix, use `/config general prefix: <new-prefix>`.
+If you have forgotten the prefix, simply ping/mention Fyre and it will respond with the current prefix (eg. @Fyre).
+
+## Text Command Syntax
+By default, Fyre has 3 ways to specify options in text commands.
+
+For commands that only have 1 or 2 options, or all options are required
+(eg. ticket staff commands) the syntax is `>command <option-1> <option-2>`.
+
+For the rest of Fyre's text commands, the syntax is
+`>command --option-1: value-1 --option-2: value-2` or `>command option-1: value-1 option-2: value-2`.
+
+You can use `--option` or `option:` interchangeably in commands as you please.
+There is no need for quotes around values, as values include spaces by default.
+
+If you need help with a command's syntax, simply use the command with no options provided `>command`.

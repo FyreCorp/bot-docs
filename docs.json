@@ -16,30 +16,32 @@
 		"content": "Fyre Bot is currently in Early Access. Please report any bugs or give any feedback to @thefallenspirit on Discord."
 	},
 	"navigation": {
-		"dropdowns": [
+		"global": {
+			"anchors": [
+				{
+					"icon": "discord",
+					"anchor": "Invite / Install",
+					"href": "https://discord.com/oauth2/authorize?client_id=1350451983022166158"
+				}
+			]
+		},
+		"groups": [
 			{
-				"icon": "discord",
-				"dropdown": "Fyre Bot",
-				"description": "An advanced Discord bot built for developers and power users.",
-				"global": {
-					"anchors": [
-						{
-							"icon": "discord",
-							"anchor": "Invite / Install",
-							"href": "https://discord.com/oauth2/authorize?client_id=1350451983022166158"
-						}
-					]
-				},
-				"groups": [
+				"group": "The Basics",
+				"pages": ["syntax", "perms/bot"]
+			},
+			{
+				"group": "Modules",
+				"pages": [
 					{
-						"group": "The Basics",
-						"pages": ["bot/perms/bot"]
-					},
-					{
-						"group": "Miscellaneous",
-						"pages": ["bot/misc/variables"]
+						"group": "Tickets",
+						"pages": []
 					}
 				]
+			},
+			{
+				"group": "Miscellaneous",
+				"pages": ["misc/variables"]
 			}
 		]
 	},
