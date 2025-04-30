@@ -34,8 +34,9 @@
 				"group": "Modules",
 				"pages": [
 					{
+						"icon": "tickets",
 						"group": "Tickets",
-						"pages": []
+						"pages": ["modules/tickets/commands"]
 					}
 				]
 			},
