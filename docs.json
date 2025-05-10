@@ -36,7 +36,7 @@
 					{
 						"icon": "tickets",
 						"group": "Tickets",
-						"pages": ["modules/tickets/commands"]
+						"pages": ["modules/tickets/getting-started"]
 					}
 				]
 			},

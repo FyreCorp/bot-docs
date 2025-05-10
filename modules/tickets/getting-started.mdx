@@ -1,7 +1,7 @@
 ---
-name: 'Commands'
-icon: 'slash-forward'
-description: "Learn about Fyre's ticket staff and config commands."
+icon: 'circle-info'
+title: 'Getting Started'
+description: "Learn about Fyre's ticket module commands and how to create and manage ticket categories."
 ---
 
 ## Staff Commands
@@ -18,18 +18,18 @@ Below is a list of Fyre's staff commands for tickets. All of these commands are 
 - `/move`: Move the ticket to a different ticket category (ticket staff).
 - `/transfer`: Transfer the ticket to a different owner (ticket owner or staff).
 
-## Config Commands
+
+## General Config Commands
 There are multiple commands that you can use to customize different options or functions of Fyre's tickets module.
 
 To create a new ticket category, use `/categories create` and provide all of the required options.
-Scroll down to learn more about this command's options.
+[Tap/click here](#create-category-options) to learn more about this command's options.
 
 To update a ticket category, use `/categories update` and fill in all of the fields that you want to change.
 This command is the main config command for a category, and features most options that you can configure for tickets.
 [Click here](/modules/tickets/options) to learn more about this command's options.
 
 To delete a ticket category, use `/categories delete` and provide the category you want to delete.
-
 
 ### Create Category Options
 Below is a list of all the options you can provide when creating a ticket category and what they're for.
@@ -38,3 +38,26 @@ Below is a list of all the options you can provide when creating a ticket catego
 - `description`: A description for the category (max 100 chars) that will be shown in select menus.
 - `server-category`: The category channel to create new tickets in.
 - `logs-channel`: The text channel to send ticket logs to (ticket closed, transcripts, etc).
+
+
+## Category Modal/Questions
+You can add up to 5 questions per category that will be presented to the user when they attempt to open a ticket.
+
+To create a new question for a category, use `/category questions add`.
+All fields correspond to the same field for a
+[Text Input Component](https://discord.com/developers/docs/components/reference#text-input)
+of a modal.
+
+To delete a question, use `/category questions remove` and provide the category and question you want to remove.
+
+
+## Category Roles (Ping, Staff, Required)
+With Fyre you can have up to 10 roles in each related field per category.
+To manage category roles, use `/categories roles add` and `/categories roles remove`.
+
+Ping roles are the roles that Fyre will ping when a ticket is opened, or when a ticket close request is made.
+
+Staff roles are the roles that will be able to see all newly-created tickets, and manage them.
+
+Required roles are roles that a member must have before opening a ticket in a specific category.
+With Fyre, a member must only have **one** of the required roles to open a ticket in a locked category.
