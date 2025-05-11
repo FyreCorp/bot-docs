@@ -1,6 +1,7 @@
 ---
-icon: 'circle-info'
-title: 'Getting Started'
+icon: 'info'
+sidebarTitle: 'Getting Started'
+title: 'Getting Started with Tickets'
 description: "Learn about Fyre's ticket module commands and how to create and manage ticket categories."
 ---
 
@@ -27,7 +28,7 @@ To create a new ticket category, use `/categories create` and provide all of the
 
 To update a ticket category, use `/categories update` and fill in all of the fields that you want to change.
 This command is the main config command for a category, and features most options that you can configure for tickets.
-[Click here](/modules/tickets/options) to learn more about this command's options.
+{/* [Tp/click here](/modules/tickets/options) to learn more about this command's options. */}
 
 To delete a ticket category, use `/categories delete` and provide the category you want to delete.
 
@@ -61,3 +62,30 @@ Staff roles are the roles that will be able to see all newly-created tickets, an
 
 Required roles are roles that a member must have before opening a ticket in a specific category.
 With Fyre, a member must only have **one** of the required roles to open a ticket in a locked category.
+
+
+## Welcome Panel
+You can customise Fyre's welcome panel (the first message sent in the ticket) quite extensively.
+
+<Tip>
+The welcome panel supports Fyre's [Variables](/misc/variables).
+You can use any of these in the embed title or description.
+</Tip>
+
+To change the basics like the title and description, use `/categories welcome-panel embed`.
+
+You can also change the name, colour, and position of the buttons under the panel, or disable certain buttons entirely.
+To update these buttons, use `/categories welcome-panel buttons`.
+
+
+## Confirmation Prompt
+Fyre features an optional confirmation prompt when opening tickets.
+When enabled, members will be shown the provided message and have to
+wait x amount of seconds before confirming and opening the ticket.
+
+To enable, disable, or update a category's confirmation prompt, use `/categories confirmation-prompt`.
+
+There are 2 modes available, Plain and Embed.
+Plain will show a plaintext confirmation message with a header title and regular description.
+Embed will show the same confirmation message but inside an embed, using the category's colour.
+

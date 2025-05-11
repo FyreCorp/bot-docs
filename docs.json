@@ -2,15 +2,21 @@
 	"$schema": "https://mintlify.com/docs.json",
 	"theme": "mint",
 	"name": "Fyre Bot",
+	"favicon": "/favicon.png",
+	"appearance": {
+		"strict": true
+	},
+	"icons": {
+		"library": "lucide"
+	},
+	"logo": {
+		"dark": "/icon.png",
+		"light": "/icon.png"
+	},
 	"colors": {
 		"dark": "#198BB8",
 		"light": "#1FA9E1",
 		"primary": "#1FA9E1"
-	},
-	"seo": {
-		"metatags": {
-			"theme-color": "#1FA9E1"
-		}
 	},
 	"banner": {
 		"content": "Fyre Bot is currently in Early Access. Please report any bugs or give any feedback to @thefallenspirit on Discord."
@@ -45,14 +51,6 @@
 				"pages": ["misc/variables"]
 			}
 		]
-	},
-	"favicon": "/favicon.png",
-	"appearance": {
-		"strict": true
-	},
-	"logo": {
-		"dark": "/icon.png",
-		"light": "/icon.png"
 	},
 	"footer": {
 		"socials": {
