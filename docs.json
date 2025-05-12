@@ -39,6 +39,7 @@
 			{
 				"group": "Modules",
 				"pages": [
+					"modules/auto-purge",
 					{
 						"icon": "tickets",
 						"group": "Tickets",
