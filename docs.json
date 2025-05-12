@@ -3,15 +3,16 @@
 	"theme": "mint",
 	"name": "Fyre Bot",
 	"favicon": "/favicon.png",
-	"appearance": {
-		"strict": true
-	},
 	"icons": {
 		"library": "lucide"
 	},
 	"logo": {
 		"dark": "/icon.png",
 		"light": "/icon.png"
+	},
+	"appearance": {
+		"strict": true,
+		"default": "dark"
 	},
 	"colors": {
 		"dark": "#198BB8",
