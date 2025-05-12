@@ -42,7 +42,7 @@
 					{
 						"icon": "tickets",
 						"group": "Tickets",
-						"pages": ["modules/tickets/getting-started"]
+						"pages": ["modules/tickets/getting-started", "modules/tickets/options"]
 					}
 				]
 			},
