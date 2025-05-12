@@ -40,6 +40,7 @@
 				"group": "Modules",
 				"pages": [
 					"modules/auto-purge",
+					"modules/auto-thread",
 					{
 						"icon": "tickets",
 						"group": "Tickets",
