@@ -41,6 +41,7 @@
 				"pages": [
 					"modules/auto-purge",
 					"modules/auto-thread",
+					"modules/media-only",
 					{
 						"icon": "tickets",
 						"group": "Tickets",
