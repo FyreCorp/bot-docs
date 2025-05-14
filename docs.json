@@ -35,7 +35,7 @@
 		"groups": [
 			{
 				"group": "The Basics",
-				"pages": ["syntax", "perms/bot"]
+				"pages": ["basics/syntax", "basics/bot-permissions", "basics/utilities"]
 			},
 			{
 				"group": "Modules",

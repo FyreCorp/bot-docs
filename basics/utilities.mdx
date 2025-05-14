@@ -1,0 +1,25 @@
+---
+icon: 'zap'
+title: 'Utility Commands'
+description: "View a list of Fyre's utility commands and how they can help you elevate your server."
+---
+
+## Random Commands
+- `/whois`: View advanced information about a user including creation date, join date, role list, permissions list, and more.
+- `/server`: View advanced information about the current server including creation date, server owner, role/channel counts, flags, boosts, and more.
+- `/colour`: View an image representation of a provided colour in hex code format.
+
+## Role Commands
+Fyre's primary role command for easily adding roles to or removing roles from a user is `/role` (`/role @user <role-string>`).
+
+A role string is a comma separated list of role IDs, role mentions, or role names.
+By default, Fyre will toggle the role (remove if the member already has it, or add if not).
+
+To override this behaviour, you can prefix individual roles with `+` or `-` to force them to be added or removed.
+You can also prefix the role string with `++` or `--` to force all roles to be added or removed.
+
+<br/>
+
+Fyre also has a bulk role command to add a role to or remove a role from an entire server or role at once.
+Using `/roles bulk` (`/roles bulk +/- @role [@role-filter]`) you can easily add or remove a role to/from many members at once.
+
