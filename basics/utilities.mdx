@@ -9,6 +9,7 @@ description: "View a list of Fyre's utility commands and how they can help you e
 - `/server`: View advanced information about the current server including creation date, server owner, role/channel counts, flags, boosts, and more.
 - `/colour`: View an image representation of a provided colour in hex code format.
 
+
 ## Role Commands
 Fyre's primary role command for easily adding roles to or removing roles from a user is `/role` (`/role @user <role-string>`).
 
@@ -23,3 +24,41 @@ You can also prefix the role string with `++` or `--` to force all roles to be a
 Fyre also has a bulk role command to add a role to or remove a role from an entire server or role at once.
 Using `/roles bulk` (`/roles bulk +/- @role [@role-filter]`) you can easily add or remove a role to/from many members at once.
 
+### Role Management Commands
+Fyre has a few role management commands for creating, updating, and deleting roles.
+
+You can use `/roles create` to quickly and easily create a role, it supports the following options:
+- `name`: A name for the role (max 64 chars).
+- `[colour]`: A colour (hex code) for the role.
+- `[hoisted]`: A true or false value if the role should be hoisted.
+- `[mentionable]`: A true or false value if the role should be mentionable.
+- `[permissions]`: A permissions value for the role (should be an integer).
+
+To quickly update a role, use `/roles update @role`. THis command supports the same options as the roles create command.
+
+If you want to delete a role, you can use `/roles delete @role` to easily delete it.
+Be warned, there is no confirmation prompt, just instant deletion.
+
+
+## Channel Commands
+Fyre offers a few bulk commands for channels to automate creating or deleting channels.
+
+You can use `/channels bulk-create` to create a numbered list of channels (up to 10 at a time).
+This command is useful if you need to create a large amount of temporary chats. It supports the following options:
+
+- `type`: The type of channels to create (text or voice).
+- `count`: The total number of channels to create (max 10).
+- `name-format`: A name format for the new channels, use \{count\} for the channel number.
+- `[category]`: A category channel to create the channels under.
+- `[start-at]`: The count to start at, useful for creating more then 10 channels.
+- `[permissions]`: A permissions array for the channels, should be in the
+following format: `<role-id>:<allow-perm-value>:<deny-perm-value>`.
+- `[age-restricted]`: A true or false value if the channels should be marked as age restricted.
+
+You can use `/channels bulk-delete` to delete channels in bulk by name match. This command supports the following options:
+
+- `[type]`: The type of channel to delete.
+- `[category]`: The category to delete channels from.
+- `[name-includes]`: An includes filter for the name of the channel, case sensitive.
+- `[name-starts-with]`: An includes filter for the start of channel names, case sensitive.
+- `[name-ends-with]`: An includes filter for the end of channel names, case sensitive.
