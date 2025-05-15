@@ -1,0 +1,19 @@
+---
+icon: 'brick-wall'
+title: 'Jail'
+description: "Learn about Fyre's jail module and how to setup jailing and jail tickets."
+---
+
+## Usage
+You can easily jail a user by using `/jail @user [reason]`. To unjail a user, use `/unjail @user`.
+
+
+## Configuring
+To configure the jail module, use `/config jail`. This command supports the following options:
+
+- `enabled`: A true or false value if the jail module is enabled.
+- `category`: A ticket category to create jail tickets in (leave blank for no tickets, null to reset).
+- `remove-roles`: A true or false value if a member's roles should be removed when they are jailed.
+
+### Jail Roles
+You can add or remove jail roles using `/config jail-roles add @role` and `/config jail-roles remove @role`.

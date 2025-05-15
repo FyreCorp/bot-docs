@@ -40,6 +40,7 @@
 			{
 				"group": "Modules",
 				"pages": [
+					"modules/jail",
 					"modules/auto-purge",
 					"modules/auto-thread",
 					"modules/media-only",
