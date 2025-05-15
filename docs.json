@@ -43,6 +43,7 @@
 					"modules/jail",
 					"modules/auto-purge",
 					"modules/auto-thread",
+					"modules/auto-responses",
 					"modules/media-only",
 					{
 						"icon": "tickets",
