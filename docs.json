@@ -46,6 +46,7 @@
 				"group": "Modules",
 				"pages": [
 					"modules/jail",
+					"modules/last-fm",
 					"modules/auto-purge",
 					"modules/auto-thread",
 					"modules/auto-responses",
