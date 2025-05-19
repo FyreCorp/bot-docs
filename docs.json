@@ -26,9 +26,14 @@
 		"global": {
 			"anchors": [
 				{
-					"icon": "discord",
-					"anchor": "Invite / Install",
+					"icon": "plus",
+					"anchor": "Add App",
 					"href": "https://discord.com/oauth2/authorize?client_id=1350451983022166158"
+				},
+				{
+					"icon": "circle-help",
+					"anchor": "Discord Server",
+					"href": "https://discord.gg/"
 				}
 			]
 		},
@@ -54,7 +59,7 @@
 			},
 			{
 				"group": "Miscellaneous",
-				"pages": ["misc/variables"]
+				"pages": ["misc/variables", "misc/templating"]
 			}
 		]
 	},

@@ -1,0 +1,113 @@
+---
+icon: 'code'
+title: 'Templating'
+description: "Learn about Fyre's template syntax and where it can be used to level-up your customisation."
+---
+
+<Info>
+Fyre's templating is based on [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars).
+Visit their website to learn more advanced logic and syntax.
+</Info>
+
+## Basic Syntax
+Handlebars has a simple to use syntax for inserting variables into text.
+Templating is built with [Fyre's Variables](./variables) in mind to give you the best experience.
+
+You can use all
+[Discord Markdown](https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline)
+in your templates, Handlebars just adds additional syntax for variables.
+
+To insert a variable, surround it in triple braces/curly brackets.
+We use triple braces because they don't do [HTML Escaping](https://handlebarsjs.com/guide/#html-escaping).
+
+If your variable won't return any special characters (`& \ " ' = <>`) you can use double braces instead of triple braces.
+<CodeGroup>
+
+```handlebars Template
+Welcome {{{user.mention}}} to {{{guild.name}}}!
+```
+
+```txt Result
+Welcome @Fallen to Fyre Support!
+```
+
+</CodeGroup>
+
+
+## Basic Logic
+Handlebars offers a few helpers to work with optional variables or do simple logic checks.
+
+### If / If Else
+To check if an optional variable exists, or if a boolean variable is true, use `#if`.
+You don't need to have an `{{else}}` statement if you don't need one, but it's provided in this example anyway.
+
+<CodeGroup>
+```handlebars Template
+{{#if track.nowPlaying}}
+Track is Now Playing
+{{else}}
+Track isn't Playing
+{{/if}}
+
+Track Name: {{{track.name}}}
+```
+
+```txt Result (Playing)
+Track is Now Playing
+
+Track Name: The Outfield
+```
+
+```txt Result (Stopped)
+Track isn't Playing
+
+Track Name: The Outfield
+```
+</CodeGroup>
+
+### Unless
+Unless is the opposite of if. Use it to check if a variable doesn't exist, or if a boolean value is false, use `#unless`.
+
+<CodeGroup>
+```handlebars Template
+{{#unless track.loved}}
+Track isn't Loved!\n
+{{/unless}}
+Track Name: The Outfield
+```
+
+```txt Result (Loved)
+Track Name: The Outfield
+```
+
+```txt Result (No Love)
+Track isn't Loved!
+
+Track Name: The Outfield
+```
+</CodeGroup>
+
+
+## Custom Helpers
+Fyre has some custom helpers to add additional functionality to Handlebars.
+
+### Format Number
+You can use the `formatNumber` helper to format long numbers with commas or periods.
+
+This helper supports using an
+[IETF Language Tag](https://en.wikipedia.org/wiki/IETF_language_tag)
+for regional formatting (eg. "en-US" or "en-DK").
+
+<CodeGroup>
+```handlebars Template
+Track Name: {{{track.name}}}
+Total Plays: {{formatNumber track.totalPlayCount}}
+Total Plays (en-DK): {{formatNumber track.totalPlayCount "en-DK"}}
+```
+
+```txt Result
+Track Name: The Outfield
+Total Plays: 28,200
+Total Plays (en-DK): 28.200
+```
+</CodeGroup>
