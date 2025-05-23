@@ -1,0 +1,42 @@
+---
+icon: 'message-circle-code'
+title: 'Message Templates'
+description: "Learn about Fyre's message templating system and how to customise Fyre's messages."
+---
+
+Fyre features a message templating system allowing you to replace messages that the app sends throughout your Discord server.
+This templating system allows you to build embeds/containers or plaintext messages that you can use across Fyre.
+
+## Creating a Template
+To create a new message template, use `/templates create`.
+This command supports the following options:
+
+- `type`: The type of template to create (plaintext or container).
+- `colour`: The colour (hex code) to use for the container colour.
+
+A modal will be brought up where you can provide a name for your template, and the template code itself.
+
+
+## Updating a Template
+To update an existing message template, use `/templates update`.
+This command supports the same options as the create command, and will bring up the same modal.
+
+
+## Using Templates
+In any part of Fyre that supports templates,
+the associated config command should have an option with `template` in the name somewhere.
+
+After updating modules with your message templates,
+they will show your custom template in output instead of Fyre's default messages.
+
+If your template fails to compile, you will see the error message outputted as the command response.
+We strongly recommend you test your message templates after applying them to make sure they work.
+
+
+## Deleting a Template
+To delete a template, use `/templates delete` and provide the template you wish to delete.
+
+<Warning>
+Certain events or messages that require a message template will stop working after deleting a connected template.
+Make sure to reset the config of any modules using message templates before deleting them.
+</Warning>
