@@ -55,7 +55,7 @@
 					{
 						"icon": "tickets",
 						"group": "Tickets",
-						"pages": ["modules/tickets/getting-started", "modules/tickets/options"]
+						"pages": ["modules/tickets/getting-started", "modules/tickets/options", "modules/tickets/panels"]
 					}
 				]
 			},
