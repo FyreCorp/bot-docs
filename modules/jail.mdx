@@ -13,7 +13,8 @@ To configure the jail module, use `/config jail`. This command supports the foll
 
 - `enabled`: A true or false value if the jail module is enabled.
 - `category`: A ticket category to create jail tickets in (leave blank for no tickets, null to reset).
-- `remove-roles`: A true or false value if a member's roles should be removed when they are jailed.
+- `remove-roles`: A true or false value if a member's roles should be removed when they are jailed (default: Yes).
+- `prevent-role-changes`: If changes to a member's roles should be reversed while they are jailed (default: Yes).
 
 ### Jail Roles
 You can update your servers jail roles by using `/config jail-roles`.
