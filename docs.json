@@ -50,7 +50,7 @@
 					"modules/last-fm",
 					"modules/auto-purge",
 					"modules/auto-thread",
-					"modules/auto-responses",
+					"modules/auto-responder",
 					"modules/media-only",
 					"modules/member-backup",
 					{
