@@ -52,6 +52,7 @@
 					"modules/auto-thread",
 					"modules/auto-responses",
 					"modules/media-only",
+					"modules/member-backup",
 					{
 						"icon": "tickets",
 						"group": "Tickets",
