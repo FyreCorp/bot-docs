@@ -19,10 +19,13 @@ By default, Fyre will toggle the role (remove if the member already has it, or a
 To override this behaviour, you can prefix individual roles with `+` or `-` to force them to be added or removed.
 You can also prefix the role string with `++` or `--` to force all roles to be added or removed.
 
-<br/>
-
+### Bulk Role Command
 Fyre also has a bulk role command to add a role to or remove a role from an entire server or role at once.
-Using `/roles bulk` (`/roles bulk +/- @role [@role-filter]`) you can easily add or remove a role to/from many members at once.
+Using `/roles bulk` (`/roles bulk +/- @role [@with-role] [@without-role]`)
+you can easily add or remove a role to/from many members at once.
+
+You can use the `with-role` and `without-role` options to filter the members to add the role to.
+To cancel an existing bulk role operation, use `/roles cancel`.
 
 ### Role Management Commands
 Fyre has a few role management commands for creating, updating, and deleting roles.
