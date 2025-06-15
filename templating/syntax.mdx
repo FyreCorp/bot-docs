@@ -1,6 +1,7 @@
 ---
 icon: 'code'
-title: 'Syntax'
+title: 'Template Syntax'
+sidebarTitle: 'Syntax'
 description: "Learn about Fyre's template syntax and where it can be used to level-up your customisation."
 ---
 
@@ -90,6 +91,25 @@ Track Name: The Outfield
 
 ## Custom Helpers
 Fyre has some custom helpers to add additional functionality to Handlebars.
+
+### Random
+You can use the `random` helper to randomly select one of the provided strings or numbers.
+This helper should technically support infinite arguments, but it's only been tested up to 10.
+
+<CodeGroup>
+```handlebars Template
+{{random "Example" "Of" "Random" "Strings"}}
+```
+
+```txt Result 1
+Random
+```
+
+```txt Result 2
+Example
+```
+</CodeGroup>
+
 
 ### Format Number
 You can use the `formatNumber` helper to format long numbers with commas or periods.
