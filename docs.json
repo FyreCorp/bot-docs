@@ -71,6 +71,10 @@
 			{
 				"group": "Templating",
 				"pages": ["templating/syntax", "templating/variables", "templating/message-templates"]
+			},
+			{
+				"group": "Miscellaneous",
+				"pages": ["misc/automation"]
 			}
 		]
 	},
