@@ -40,7 +40,15 @@
 		"groups": [
 			{
 				"group": "The Basics",
-				"pages": ["basics/syntax", "basics/bot-permissions", "basics/utilities"]
+				"pages": [
+					"basics/syntax",
+					"basics/utilities",
+					{
+						"icon": "lock-keyhole",
+						"group": "Permissions",
+						"pages": ["basics/permissions/bot", "basics/permissions/advanced"]
+					}
+				]
 			},
 			{
 				"group": "Modules",
