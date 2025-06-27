@@ -21,6 +21,8 @@ a license check value (true/false),
 the values of any settings you have changed in your `/home` panel,
 and your Last.fm username and session key (if you have setup Last.fm).
 
+    Your Last.fm session key (if you have setup Last.fm) is encrypted.
+
 2. Server configuration data. Fyre stores all data provided to it through the use of any admin commands in a server.
 This includes but is not limited to:
 the server's unique server identifier ("Guild ID"), Last.fm default template code, message templates,
@@ -29,8 +31,18 @@ snipe module configuration, afk module configuration, member backup module confi
 auto thread configurations, and media only channel configurations.
 
 3. Message content. Fyre stores the message content, message attachments, and unique user identifiers ("User IDs") of message authors
-for up to 15 minutes after they have been updated or deleted. This content is used to provide the snipe module,
+for up to 15 minutes after they have been updated or deleted.
+
+    All message content that Fyre stores is encrypted.
+This content is used to provide the snipe module,
 and can be easily disabled by server admins using `/config snipe`.
+
+4. Ticket data. Fyre stores the following data when you create a ticket,
+a ticket is created for you in a server, or you claim a ticket:
+Your user identifier ("User ID"), username, display name (if set), avatar url (if set),
+and the answers to any questions you answered while making the ticket.
+
+    Ticket data is stored permanently, unless deleted at request of the server.
 
 
 ## Data Fyre Shares
@@ -45,6 +57,8 @@ All data Fyre collects and stores is kept in a secured MongoDB instance, or in F
 Fyre's MongoDB instances are hosted and secured directly by [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
 
 Sensitive data like message content is only stored in memory, and never leaves Fyre's application process.
+
+All encrypted data that Fyre stores uses AES-256-GCM.
 
 
 ## Viewing and Deleting data
@@ -61,3 +75,5 @@ and you will be Direct Messaged confirming your data deletion.
 Deleting your data will result in losing your access to Fyre, as your license data will also be deleted.
 Proceed with caution, and contact the Fyre Team in [Fyre Hub](https://discord.gg/SNxqD4ujTF) if you have any questions or concerns.
 </Warning>
+
+Fyre Bot Privacy Policy - Revision 1.1 - Last updated June 27th, 2025.
