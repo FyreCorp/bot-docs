@@ -11,6 +11,8 @@ description: "View a list of Fyre's utility commands and how they can help you e
 
 
 ## Role Commands
+All role commands support typing the role name instead of having to mention or provide a role ID.
+
 Fyre's primary role command for easily adding roles to or removing roles from a user is `/role` (`/role @user <role-string>`).
 
 A role string is a comma separated list of role IDs, role mentions, or role names.
@@ -33,24 +35,20 @@ To cancel an existing bulk role operation, use `/roles cancel`.
 Fyre features a role move command that allows you to easily move a role to the top/bottom of the hierarchy,
 or above/under another role. 
 
-To move a role, use `/roles move` (`/roles move @role top/bottom/above/below [@target-role]`).
+To move a role, use `/roles move` (`>rmove`).
+Command syntax: `/roles move @role top/bottom/above/below [@target-role]`.
 The `@target-role` option is required with the above or below position.
 
 
 ### Role Management Commands
 Fyre has a few role management commands for creating, updating, and deleting roles.
 
-You can use `/roles create` to quickly and easily create a role, it supports the following options:
-- `name`: A name for the role (max 64 chars).
-- `[colour]`: A colour (hex code) for the role.
-- `[hoisted]`: A true or false value if the role should be hoisted.
-- `[mentionable]`: A true or false value if the role should be mentionable.
-- `[permissions]`: A permissions value for the role (should be an integer).
-
-To quickly update a role, use `/roles update @role`. This command supports the same options as the roles create command.
-
-If you want to delete a role, you can use `/roles delete @role` to easily delete it.
-Be warned, there is no confirmation prompt, just instant deletion.
+- `/roles create`: Quickly and simply create a new role.
+- `/roles update`: Update a role's name and position.
+- `/roles color` (`>rcolor`): Update a role's colours and style.
+- `/roles icon` (`>ricon`): Update a role's icon with an emoji or attachment.
+- `/roles info` (`>rinfo`): View a role's name, colours, member count, and more.
+- `/roles delete`: Quickly delete a role.
 
 
 ## Channel Commands
