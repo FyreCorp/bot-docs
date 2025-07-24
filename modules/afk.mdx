@@ -1,0 +1,25 @@
+---
+icon: 'moon'
+title: 'AFK'
+description: "Learn about Fyre's AFK module and how to configure it."
+---
+
+## Usage
+By default, all members in a server can use `/afk` to go AFK.
+If the member is pinged while they are AFK, Fyre will respond with their AFK status and record the message link.
+
+When a member returns from being AFK, Fyre will respond and provide the message links to all mentions while they were AFK.
+
+
+## Configuring
+To update a server's AFK configuration, use `/config afk`.
+This command supports the following options:
+
+- `enabled`: If the AFK module is enabled in the server (default: Yes).
+- `delete-set-replies-after`: How long to wait before deleting `/afk` command replies in seconds (default: Never, max: 60).
+- `delete-end-replies-after`: How long to wait before deleting afk return messages in seconds (default: Never, max: 60).
+- `delete-mention-replies-after`: How long to wait before deleting afk mention messages in seconds (default: 5, min: 2, max: 60).
+- `rename-afk-members`: If Fyre should add "[AFK]" to AFK members' nicknames (default: Yes).
+- `set-template`: A [message template](/templating/message-templates) to replace the default set (`/afk`) message.
+- `end-template`: A [message template](/templating/message-templates) to replace the default end (afk return) message.
+- `mention-template`: A [message template](/templating/message-templates) to replace the default afk mention message.

@@ -54,6 +54,7 @@
 				"group": "Modules",
 				"pages": [
 					"modules/jail",
+					"modules/afk",
 					"modules/snipe",
 					"modules/last-fm",
 					"modules/auto-purge",
