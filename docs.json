@@ -60,8 +60,9 @@
 					"modules/auto-purge",
 					"modules/auto-thread",
 					"modules/auto-responder",
-					"modules/media-only",
+					"modules/lock",
 					"modules/member-backup",
+					"modules/media-only",
 					{
 						"icon": "tickets",
 						"group": "Tickets",

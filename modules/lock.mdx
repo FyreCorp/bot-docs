@@ -1,0 +1,30 @@
+---
+icon: 'lock'
+title: 'Channel Locking'
+description: "Learn about Fyre's channel locking commands and how to use them."
+---
+
+## Usage
+You can easily lock a channel using `/lock`, and unlock a channel using `/unlock`.
+
+## How it Works
+By default, Fyre will deny "Send Messages" permissions for **all role overwrites** on a channel, including @everyone.
+
+When unlocking, Fyre will grant "Send Messages" to all role overwrites that previously had the "Send Messages" permission,
+and @everyone if it previously had "Send Messages".
+
+## Customising Behaviour
+You can change which roles Fyre locks out of channels on a per channel or per server basis.
+
+To add or remove a lock role, use `/config lock-roles add` and `/config lock-roles remove`.
+To add a lock role to a channel, specify the channel when using the above commands.
+
+When adding lock roles to the server,
+Fyre will overwrite locked channels allowing lock roles the "Send Messages" permission in locked channels.
+
+When adding lock roles to a channel,
+Fyre will overwrite that channel when locked, allowing lock roles the "Send Messages" permission.
+
+<Info>
+If a channel has it's own lock roles, Fyre will ignore the server's lock roles when that channel is locked.
+</Info>
