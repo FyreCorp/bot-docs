@@ -62,11 +62,23 @@ These variables are available when using a Custom Theme with Fyre's Last.fm inte
 - `attributes.totalScrobbles`: The connected user's total scrobble count.
 
 
-## Ticket Channel Name Variables
-These variables are supported in the channel name formats of ticket categories.
+## Feature Specific Variables
+These variables are specific to certain features like tickets or the AFK system.
 
-- `username`: The username of the ticket owner.
-- `claimer`: The username of the ticket claimer.
+<Tabs>
+    <Tab title="AFK" icon="moon">
+        - `afk.status?` - The AFK users's custom status (if set).
+        - `afk.duration` - The duration of the target's AFK status (if AFK).
+        - `afk.mentionLinks?` - A list of message links where the target was mentioned (if AFK).
+    </Tab>
+
+    <Tab title="Ticket Channels" icon="tickets">
+        - `username` - The username of the ticket owner.
+        - `claimer` - The username of the ticket claimer.
+
+        <Info>These variables are only for ticket channel name formats.</Info>
+    </Tab>
+</Tabs>
 
 
 ## Random Variables
