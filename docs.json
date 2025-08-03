@@ -22,6 +22,11 @@
 	"banner": {
 		"content": "Fyre Bot is currently in Early Access. Please report any bugs or give any feedback to @thefallenspirit on Discord."
 	},
+	"seo": {
+		"metatags": {
+			"og:site_name": "Fyre Bot Docs"
+		}
+	},
 	"navigation": {
 		"global": {
 			"anchors": [
