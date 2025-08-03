@@ -73,7 +73,7 @@
 					{
 						"icon": "tickets",
 						"group": "Tickets",
-						"pages": ["modules/tickets/getting-started", "modules/tickets/options", "modules/tickets/panels"]
+						"pages": ["modules/tickets/general", "modules/tickets/managing"]
 					}
 				]
 			},

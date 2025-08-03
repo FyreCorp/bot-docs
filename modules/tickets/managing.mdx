@@ -1,10 +1,51 @@
 ---
-title: 'Ticket Options'
-icon: 'sliders-horizontal'
-description: "View a list of the supported config options for Fyre's ticket module."
+icon: 'circle-plus'
+title: 'Managing Tickets'
+sidebarTitle: 'Managing'
+description: "Learn how to create, update, and delete ticket categories on Fyre."
 ---
 
-## General Options
+## Creating a Categories
+To create a ticket category, use `/categories create`. This command supports the following options:
+
+- `name` - The name for the new ticket category (will be shown in related panels and in the `/open` command, max 32 chars).
+- `description` - A description for the category (max 100 chars) that will be shown in select menus.
+- `server-category` - The category channel to create new tickets in.
+- `logs-channel` - The channel to send ticket logs and transcripts to (Text Channel only).
+
+
+## Managing Questions
+Each ticket category can have up to 5 questions members will have to answer before they can open a ticket.
+
+### Add a Question
+To add a question to a ticket category, use `/categories questions add`.
+This command supports the following options:
+
+- `category` - The category ID to add the question to (autocomplete).
+- `name` - The name of the question (max 45 chars).
+- `style` - The style of the question (Short or Paragraph).
+- `required` - If the question is required (Yes or No, default: Yes).
+- `min-length` - The minimum length of the question answer.
+- `max-length` - The maximum length of the question answer.
+- `placeholder` - A placeholder answer for the question (max 100 chars).
+
+### Update a Question
+To update a question in a ticket category, use `/categories questions update`.
+This command supports the same options as above.
+
+## Remove a Question
+To remove a question from a ticket category, use `/categories questions remove`.
+This command supports the following options:
+
+- `category` - The category ID to remove the question from (autocomplete).
+- `question` - The ID of the question to remove (autocomplete).
+
+
+## Updating Categories
+When updating ticket categories, you have a few commands you can use.
+Below is a list of each update command and what they're for.
+
+### General Options
 A list of general config options for ticket categories.
 You can update these options using `/categories update general`.
 
@@ -20,18 +61,18 @@ You can update these options using `/categories update general`.
 - `button-colour`: The colour/style of the open button in ticket panels (default: Blue).
 
 
-## Permission Options
+### Permission Options
 A list of permission-related config options for ticket categories.
 You can update these options using `/categories update permissions`.
 
-### Close Behaviour
+#### Close Behaviour
 Fyre has 3 types of close behaviours that apply to staff or the ticket owner when trying to close a ticket.
 
 - **Close**: The ticket will close immediately without request.
 - **Request**: Fyre will send a prompt asking the ticket staff or ticket owner if the ticket can be closed.
 - **Block**: Fyre will prevent the executor from closing the ticket.
 
-### Who Can Action
+#### Who Can Action
 Fyre has a few options for who can do what with tickets, here's the gist.
 
 - **Ticket Owner & Staff**: The ticket owner and any ticket staff have permission to do the action.
@@ -52,7 +93,7 @@ Fyre has a few options for who can do what with tickets, here's the gist.
 - `staff-bypass-create-cooldown`: If staff are able to bypass the ticket creation cooldown in a category (default: No).
 
 
-## Advanced Options
+### Advanced Options
 A list of advanced config options for ticket categories.
 You can update these options using `/categories update advanced`.
 
@@ -69,3 +110,13 @@ You can update these options using `/categories update advanced`.
 
 - `max-tickets-user`: The maximum amount of tickets per user in a category (default: 1).
 - `max-tickets-category`: The maximum amount of tickets total in a category (default: Infinite).
+
+
+## Deleting Categories
+To delete a ticket category, use `/categories delete`. This command supports the following options:
+
+- `category` - The category ID to delete (autocomplete).
+
+<Danger>
+Make sure all tickets in a category are closed first, or they will become unclosable.
+</Danger>
