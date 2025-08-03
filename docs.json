@@ -24,6 +24,7 @@
 	},
 	"seo": {
 		"metatags": {
+			"theme-color": "#1FA9E1",
 			"og:site_name": "Fyre Bot Docs"
 		}
 	},
