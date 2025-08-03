@@ -62,6 +62,8 @@ this is to prevent accidental form submissions from being created.
 Users will be shown this confirmation prompt whenever they attempt 
 to start a form submission via a form panel or the `/form` command.
 
+![Form User Confirmation Prompt Example](/screenshots/forms/user-confirmation-prompt.png)
+
 You can customize this confirmation prompt to say whatever you prefer easily using `/forms confirmation`.
 This command support the following options:
 
@@ -74,7 +76,27 @@ After using this command, a modal will popup allowing you to enter a custom temp
 This template supports [Guild](/templating/variables#guild%2Fserver-variables)
 and [Form](/templating/variables#feature-specific-variables) variables.
 
-// Screenshot Here
+![Form Admin Confirmation Prompt Template Example](/screenshots/forms/admin-confirmation-prompt-template.png)
 
 
-## Form Panel Docs Here
+## Form Panels
+Just like tickets, you can create form panels.
+These panels can have buttons or a select menu for members to easily start form submissions.
+
+To create a form panel, use `/forms create-panel`. This command supports the following options:
+
+- `type` - The type of panel to create (Buttons or Select Menu).
+- `channel` - The channel to send the panel in (text channels only).
+- `colour` - A hex code colour to use in the panel.
+- `button-name` - The name of the button if you're making a one button panel.
+- `select-menu-placeholder` - The placeholder text in the select menu if you're making a select menu panel.
+
+After using this command, a modal will popup allowing you to enter a template for the form panel.
+Form panels don't support any template variables.
+
+![Form Admin Create Panel Template Example](/screenshots/forms/admin-create-panel-template.png)
+
+After entering your template code, you'll be shown a select menu where you can choose up to 5 forms to link to this panel.
+If you need to expose more than 5 forms, use multiple panels.
+
+![Form Admin Create Panel Selector Example](/screenshots/forms/admin-create-panel-selector.png)
