@@ -1,0 +1,80 @@
+---
+icon: 'list-check'
+label: 'Options'
+description: "Learn how to configure Fyre's forms module and create forms."
+---
+
+## Creating & Updating Forms
+To create a new form, use `/forms create`. This command supports the following options:
+
+- `name` - The name for the form (max 32 chars).
+- `description` - A short description of the form (max 100 chars).
+- `channel` - The channel that this form's submissions will be posted in (text channel only).
+
+To update an existing form, use `/forms update`. This command supports the following options:
+
+- `form` - The form ID to update (autocomplete).
+- `name` - The name for the form (max 32 chars).
+- `description` - A short description of the form (max 100 chars).
+- `channel` - The channel that the form's submissions will be posted in (text channel only).
+
+
+## Form Questions
+Each form can have up to 25 questions, here's how to add, update, and remove questions.
+
+To add a question to a form, use `/forms questions add`. This command supports the following options:
+
+- `form` - The form ID to add a question to (autocomplete).
+- `name` - The name of the question (max 100 chars).
+- `style` - The style of the question (Short or Paragraph).
+- `required` - If the question is required (Yes or No).
+- `min-length` - The minimum length of the question's answer.
+- `max-length` - The maximum length of the question's answer.
+- `placeholder` - A placeholder answer for the question (max 100 chars).
+
+To update a question, use `/forms questions update`. This command supports the same options as above.
+
+To remove a question from a form, use `/forms questions remove`. This command supports the following options:
+
+- `form` - The form ID to remove a question from (autocomplete).
+- `question` - The question ID to remove from the form (autocomplete).
+
+
+## Ping Roles
+Ping roles are roles that Fyre will ping/mention when a new form submission is created.
+
+You can add or remove ping roles using
+`/forms roles add type:Ping Role` and `/forms roles remove type:Ping Role`.
+
+
+## Required Roles
+Required roles are roles that a member requires to fill out the form.
+A member must have one of the required roles to fill out a form.
+
+You can add or remove required roles using
+`/forms roles add type:Required Role` and `/forms roles remove type:Required Role`.
+
+
+## Confirmation Prompt
+Every form has a confirmation prompt that is enabled by default,
+this is to prevent accidental form submissions from being created.
+
+Users will be shown this confirmation prompt whenever they attempt 
+to start a form submission via a form panel or the `/form` command.
+
+You can customize this confirmation prompt to say whatever you prefer easily using `/forms confirmation`.
+This command support the following options:
+
+- `form` - The form ID to update (autocomplete).
+- `enabled` - Whether the confirmation prompt is enabled for this form (Yes or No).
+- `delay` - The delay in seconds a user must wait before starting the form (default: none, min: 5, max: 30).
+- `mode` - The mode for displaying the confirmation prompt (Plain or Container, default: Plain).
+
+After using this command, a modal will popup allowing you to enter a custom template for the confirmation prompt.
+This template supports [Guild](/templating/variables#guild%2Fserver-variables)
+and [Form](/templating/variables#feature-specific-variables) variables.
+
+// Screenshot Here
+
+
+## Form Panel Docs Here
