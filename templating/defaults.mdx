@@ -1,0 +1,36 @@
+---
+icon: 'layout-template'
+title: 'Default Message Templates'
+sidebarTitle: 'Default Templates'
+description: "A list of Fyre's default message templates."
+---
+
+### Last.fm Template
+```handlebars
+### {{#if track.nowPlaying~}} {{{emojis.nowPlaying}}} {{/if}}[{{{track.name}}}]({{track.url}}){{#if track.loved}} ♡{{/if}}
+by **{{{track.artist.name}}}** on {{{track.album.name}}}
+ㅤ
+-# {{formatNumber track.playCount}} track scrobbles • {{formatNumber attributes.totalScrobbles}} total scrobbles
+```
+
+### AFK Set Template
+```handlebars
+You're now AFK {{#if afk.status}}with status "{{{afk.status}}}"{{else}}in {{{guild.name}}}{{/if}}.
+```
+
+### AFK End Template
+```handlebars
+Welcome back! You were afk for {{{afk.duration}}}{{#if afk.status}} with status "{{{afk.status}}}"{{/if}}.{{#if afk.mentionLinks}}
+**Mentions**: {{formatList afk.mentionLinks ", "}}.{{/if}}
+```
+
+### AFK Mention Template
+```handlebars
+{{{user.mention}}} has been afk for {{{afk.duration}}}{{#if afk.status}} with status "{{{afk.status}}}"{{/if}}.
+```
+
+### Form Confirmation Template
+```handlebars
+## Are you sure you want to start {{{form.name}}}?
+There are {{length form.questions}} questions in this form, and you will have 1 hour to complete it.
+```

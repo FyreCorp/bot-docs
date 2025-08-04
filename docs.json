@@ -71,7 +71,7 @@
 			},
 			{
 				"group": "Templating",
-				"pages": ["templating/syntax", "templating/variables", "templating/message-templates"]
+				"pages": ["templating/syntax", "templating/variables", "templating/message-templates", "templating/defaults"]
 			},
 			{
 				"group": "Miscellaneous",
