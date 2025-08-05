@@ -20,7 +20,7 @@
 		"primary": "#1FA9E1"
 	},
 	"banner": {
-		"content": "Fyre Bot is currently in Early Access. Please report any bugs or give any feedback to @thefallenspirit on Discord."
+		"content": "Fyre Bot is currently in Closed Beta. Please report any bugs or give any feedback to @thefallenspirit on Discord."
 	},
 	"seo": {
 		"metatags": {
@@ -79,7 +79,7 @@
 			},
 			{
 				"group": "Legal",
-				"pages": ["legal/terms", "legal/privacy"]
+				"pages": ["legal/terms", "legal/privacy", "legal/orders"]
 			}
 		]
 	},
