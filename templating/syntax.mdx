@@ -131,3 +131,20 @@ Total Plays: 28,200
 Total Plays (en-DK): 28.200
 ```
 </CodeGroup>
+
+
+### Format Date & Time
+You can use the `formatDate` helper to format a timestamp into any date format.
+
+This helper works with both [Dayjs](https://day.js.org/docs/en/parse/string-format)
+and [Dayjs Advanced](https://day.js.org/docs/en/plugin/advanced-format) formatting options.
+
+<CodeGroup>
+```handlebars Template
+{{formatDate 946713600 "DD/MM/YYYY HH:mm"}}
+```
+
+```txt Result
+01/01/2000 00:00
+```
+</CodeGroup>

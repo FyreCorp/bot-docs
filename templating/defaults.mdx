@@ -34,3 +34,13 @@ Welcome back! You were afk for {{{afk.duration}}}{{#if afk.status}} with status 
 ## Are you sure you want to start {{{form.name}}}?
 There are {{length form.questions}} questions in this form, and you will have 1 hour to complete it.
 ```
+
+### Time Show Template
+```handlebars
+{{{user.mention}}}'s current time is {{formatDate now "HH:mm on MMMM Do" timeZone}}.
+```
+
+### Time Conversion Template
+```handlebars
+{{{match}}}" for {{{user.mention}}} is <t:{{timestamp}}:t> on <t:{{timestamp}}:D>.
+```
