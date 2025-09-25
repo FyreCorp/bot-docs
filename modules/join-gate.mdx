@@ -1,0 +1,17 @@
+---
+icon: 'shield-x'
+title: 'Join Gate'
+description: "Learn about Fyre's join gate module and how to configure it in your server."
+---
+
+## How it Works
+When configured, Fyre's join gate module will auto-kick new users with accounts that are too young.
+Fyre will attempt to DM the user on kick to notify them why they have been kicked.
+
+
+## Configuring
+To configure the join gate module, use `/config join-gate`.
+This command supports the following options:
+
+- `enabled` - If the join gate module is enabled (default: No).
+- `minimum-account-age` - The minimum account age in days for new members (default: None, max: 90, 0 to reset).

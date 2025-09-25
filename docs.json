@@ -56,6 +56,7 @@
 					"modules/snipe",
 					"modules/forms",
 					"modules/last-fm",
+					"modules/join-gate",
 					"modules/auto-purge",
 					"modules/auto-thread",
 					"modules/time",
