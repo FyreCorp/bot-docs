@@ -63,7 +63,7 @@
 					"modules/auto-responder",
 					"modules/lock",
 					"modules/member-backup",
-					"modules/media-only",
+					"modules/media",
 					"modules/auto-react",
 					{
 						"icon": "tickets",
