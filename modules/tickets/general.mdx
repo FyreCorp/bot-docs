@@ -66,8 +66,8 @@ This command support the following options:
 - `delay` - The delay in seconds a user must wait before starting the form (default: none, min: 5, max: 30).
 - `mode` - The mode for displaying the confirmation prompt (Plain or Container, default: Plain).
 
-After using this command, a modal will popup allowing you to enter a custom template for the confirmation prompt.
-This template supports [Guild](/templating/variables#guild%2Fserver-variables) variables.
+After using this command, a modal will popup allowing you to enter content for the confirmation prompt.
+Confirmation prompts support [guild template variables](/templating/variables#guild%2Fserver-variables).
 
 ![Ticket Admin Confirmation Prompt Modal Example](/screenshots/tickets/admin-confirmation-prompt-modal.png)
 
@@ -85,11 +85,6 @@ To create a ticket panel, use `/ticket-panel`. This command supports the followi
 - `select-menu-placeholder` - The placeholder text in the select menu if you're making a select menu panel.
 
 After using this command, a modal will popup allowing you to enter a template for the ticket panel.
-Ticket panels don't support any template variables.
+Ticket panels support [guild template variables](/templating/variables#guild%2Fserver-variables).
 
 ![Ticket Admin Create Panel Template Example](/screenshots/tickets/admin-panel-template-modal.png)
-
-After entering your template code, you'll be shown a select menu where you can choose up to 5 forms to link to this panel.
-If you need to expose more than 5 forms, use multiple panels.
-
-![Ticket Admin Create Panel Selector Example](/screenshots/tickets/admin-panel-category-selector.png)
