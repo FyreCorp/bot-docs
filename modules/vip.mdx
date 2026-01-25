@@ -1,0 +1,73 @@
+---
+icon: 'gem'
+title: 'VIP'
+description: "Learn how Fyre's VIP module works, and how to configure it."
+---
+
+<Tip>All user-facing VIP commands are slash commands and text commands.</Tip>
+
+## How it Works
+You can create up to 5 VIP tiers per server.
+Each VIP tier can have a specifc role member limit, reaction limit, and reaction trigger limit.
+
+Every VIP tier must be tied to a primary role, this role determines whether a member has access to that tier's features.
+If a member's primary role changes to a different tier's,
+Fyre will automatically update their VIP profile accordingly next time they bring up the VIP panel.
+
+Server members can use `/vip info` or `>vip` to bring up the VIP panel.
+The VIP panel will display VIP role and reaction information, and allow the member to update their VIP role (if enabled).
+
+If a VIP member leaves the server, Fyre will automatically delete their VIP role and reactions.
+Their VIP profile will remain in the database for 7 days,
+in which they can join back and bring up the VIP panel to restore their role and or reactions.
+
+The same policy applies if the member loses their tier's primary role.
+
+
+## Managing VIP Roles & Reactions
+Members can manage their VIP role via the buttons under their VIP panel.
+
+To add or remove triggers, members can use `/vip triggers add`, `/vip triggers remove`, and `/vip triggers clear`.
+
+To add or remove reactions, members can use `/vip reactions add`, `/vip reactions remove`, and `/vip reactions clear`.
+
+The member's ping/mention, and role ping/mention don't count towards their total triggers, and are always active.
+
+Members' can share their role with other members using `/vip share`.
+
+
+## Managing VIP Tiers
+To create a VIP tier, use `/vip-admin tiers create`. This command supports the following options:
+
+- `name` - The name of the new VIP tier (max 32 chars).
+- `vip-role` - The primary role of the new VIP tier.
+- `role-enabled` - If the VIP tier should have an included custom role.
+- `role-member-limit` - The default member limit for the included custom role.
+- `role-hoistable` - If the included custom role should be hoistable.
+- `role-mentionable` - If the included custom role should be mentionable.
+- `trigger-limit` - The limit of auto reaction triggers to include (leave blank to disable auto reactions).
+- `reaction-limit` - The limit of auto reactions to include (leave blank to disable auto reactions).
+- `position-under-role` - The role to create new custom roles under (leave blank to create roles at the bottom of the role hierarchy).
+
+To update a VIP tier, use `/vip-admin tiers update`. This command supports the same options above.
+
+To delete a VIP tier, use `/vip-admin tiers delete` and specify the tier you want to delete.
+
+
+## Managing VIP Profiles
+To manually set a member's custom role, or update their role or reaction limits, use `/vip-admin profiles update`.
+This command supports the following options:
+
+- `user` - The member to update.
+- `role` - The new VIP/custom role for the member.
+- `triggers` - A limit change string for the member's auto reaction triggers.
+- `reactions` - A limit change string for the member's auto reactions.
+- `role-members` - A limit change string for the member's custom role members.
+
+A limit change string can be one of 4 things:
+1. 0 -- if you specify 0, it will reset the member's limit to the default for that tier.
+2. A solid number -- if you specify a solid number, it will set that member's limit to the provided number.
+3. A positive number -- if you specify a positive number (+ prefix), it will increase that member's limit by the provided number.
+4. A negative number -- if you specify a negative number (- prefix), it will decrease that member's limit by the provided number.
+
+To delete a member's VIP profile, role, and auto reactions, use `/vip-admin profiles delete` and specify the user to delete.

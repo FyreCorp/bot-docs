@@ -51,6 +51,7 @@
 			{
 				"group": "Modules",
 				"pages": [
+					"modules/vip",
 					"modules/jail",
 					"modules/afk",
 					"modules/snipe",
