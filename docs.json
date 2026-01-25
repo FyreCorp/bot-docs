@@ -20,7 +20,7 @@
 		"primary": "#1FA9E1"
 	},
 	"banner": {
-		"content": "Fyre Bot is currently in Closed Beta. Please report any bugs or give any feedback to @thefallenspirit on Discord."
+		"content": "Nina please read and don't harass me too much."
 	},
 	"seo": {
 		"metatags": {
@@ -37,7 +37,7 @@
 					"href": "https://discord.com/oauth2/authorize?client_id=1350451983022166158"
 				},
 				{
-					"icon": "circle-help",
+					"icon": "message-circle-question-mark",
 					"anchor": "Discord Server",
 					"href": "https://discord.gg/SNxqD4ujTF"
 				}
