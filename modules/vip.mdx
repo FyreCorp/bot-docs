@@ -1,7 +1,7 @@
 ---
 icon: 'gem'
 title: 'VIP'
-description: "Learn how Fyre's VIP module works, and how to configure it."
+description: "Learn how Fyre's VIP/boost roles module works, and how to configure it."
 ---
 
 <Tip>All user-facing VIP commands are slash commands and text commands.</Tip>
@@ -21,7 +21,12 @@ If a VIP member leaves the server, Fyre will automatically delete their VIP role
 Their VIP profile will remain in the database for 7 days,
 in which they can join back and bring up the VIP panel to restore their role and or reactions.
 
+If a VIP member loses their tier's primary role, Fyre will automatically delete their VIP role and reactions.
+Storing it for 7 days as mentioned above.
+
 The same policy applies if the member loses their tier's primary role.
+
+If a VIP member's tier changes, Fyre will automatically delete and re-create their role and reactions (if enabled).
 
 
 ## Managing VIP Roles & Reactions
@@ -71,3 +76,10 @@ A limit change string can be one of 4 things:
 4. A negative number -- if you specify a negative number (- prefix), it will decrease that member's limit by the provided number.
 
 To delete a member's VIP profile, role, and auto reactions, use `/vip-admin profiles delete` and specify the user to delete.
+
+
+## Global VIP Config
+There are some global settings for the VIP module, these can be configured using `/vip-admin config`.
+This command supports the following options:
+
+- `delete-role-on-tier-change` - If VIP roles should be automatically deleted and re-created when a member's VIP tier changes (default: No).
