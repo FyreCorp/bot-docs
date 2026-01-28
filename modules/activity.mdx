@@ -1,0 +1,41 @@
+---
+icon: 'message-circle-dashed'
+title: 'Activity'
+description: "Learn how Fyre's activity tracking module works and how to configure it."
+---
+
+## How it Works
+When enabled, Fyre will record the minutes a user spends in VC, and the amount of messages they send in the server.
+
+Fyre will only record these analytics from members with one of the module's whitelisted roles.
+You can also blacklist channels that activity will be ignored in.
+
+Fyre will only record minutes in voice, and total message counts (per day) when the relevant settings are enabled.
+Fyre **will not** record any other data about voice activity or message activity.
+
+
+## Usage
+To compile an activity report, use one of the following activity commands:
+
+- `/activity voice [days]` - Compile an activity report of server members' voice activity (minutes in voice, default 7 days).
+- `/activity messages [days]` - Compile an activity report of server members' message activity (message counts, default 7 days).
+- `/activity tickets <days> <categories>` - Compile an activity report of server members' ticket activity (tickets claimed).
+
+<Info>
+You must have the [`utility.activity`](/basics/permissions#advanced-permissions) fake permission,
+or the Administrator Discord permission to use these commands.
+</Info>
+
+
+## Configuring
+To configure the activity module, use `/config activity`.
+You can use this command with no options to view your current activity config.
+This command supports the following options:
+
+- `bar-color` - The HEX color of bars in activity reports.
+- `record-voice-activity` - If voice activity should be recorded (default: No).
+- `record-message-activity` - If message activity should be recorded (default: No).
+- `whitelisted-roles` - A comma separated list of whitelisted roles.
+- `add-blacklisted-channels` - A comma separated list of blacklisted channels to add.
+- `remove-blacklisted-channels` - A comma separated list of blacklisted channels to remove.
+
