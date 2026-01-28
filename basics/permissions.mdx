@@ -8,13 +8,13 @@ By default, members require Discord permissions to use restricted or protected c
 With Fyre's advanced permissions system, you can give users the ability to use commands without needing Discord permissions.
 
 ## Managing Permissions
-To add or remove permissions from a role, use the `/permissions` (`/permissions @role [permission-string]`) command.
+To add or remove permissions from a user or role, use the `/permissions` (`/permissions @user-or-role [permission-string]`) command.
 This command supports a "permissions string" similar to a [role string](../utilities#role-commands).
 
 A permission string is a comma separated list of [advanced permissions](#advanced-permissions),
 prefixed with a `+` to add the permission, or a `-` to remove the permission.
 
-You can also use the command without a permission string to view the role's current permissions.
+You can also use the command without a permission string to view the user or role's current permissions.
 
 
 ## Advanced Permissions
@@ -40,6 +40,10 @@ The "default" permissions are the native Discord permissions a member must have 
         commands to bulk create or delete channels (default: Administrator).
         - `utility.steal`: Use the `/steal` command and add emojis to a server (default: Create Expressions).
         - `utility.rename`: Use the `/rename` command and rename channels in a server (default: Manage Channels).
+        - `utility.activity` - Use the `/activity` commands and compile activity reports in a server (default: Administrator).
+
+        - `utility.unafk` - Use the `>unafk` command and remove a member's AFK status in a server (default: Moderate Members).
+        - `utility.setafk` - Use the `>setafk` command a set a member's AFK status in a server (default: Moderate Members).
     </Tab>
     <Tab title="Moderation">
         - `moderation.jail`: Use the `/jail` and `/unjail` commands to jail or unjail members in a server (default: Kick Members).
@@ -65,6 +69,12 @@ The "default" permissions are the native Discord permissions a member must have 
 
         - `channels.manage`: Use all `/channels` commands except for `/channels bulk` commands and manage auto purging,
         auto threading, and media only mode in channels (default: Manage Channels).
+
+        - `vip.*` - Use all `/vip-admin` commands and manage the VIP module in a server (default: Manage Server).
+        - `vip.config` - Use the `/vip-admin config` command and configure the VIP module in a server (default: Manage Server).
+        - `vip.profiles` - Use the `/vip-admin profiles` commands and manage VIP profiles in a server (default: Manage Server).
+        - `vip.tiers.create` - Use the `/vip-admin tiers create` command create new VIP tiers in a server (default: Manage Server).
+        - `vip.tiers.manage` - Use the `/vip-admin tiers` commands and manage VIP tiers in a server (default: Manage Server).
     </Tab>
     <Tab title="Configuration">
         - `config`: Use `/config view` and view a server's configuration default: (Manage Guild).

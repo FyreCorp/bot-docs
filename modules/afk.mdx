@@ -15,11 +15,20 @@ When a member returns from being AFK, Fyre will respond and provide the message 
 To update a server's AFK configuration, use `/config afk`.
 This command supports the following options:
 
-- `enabled`: If the AFK module is enabled in the server (default: Yes).
-- `delete-set-replies-after`: How long to wait before deleting `/afk` command replies in seconds (default: Never, max: 60).
-- `delete-end-replies-after`: How long to wait before deleting afk return messages in seconds (default: Never, max: 60).
-- `delete-mention-replies-after`: How long to wait before deleting afk mention messages in seconds (default: 5, min: 2, max: 60).
-- `rename-afk-members`: If Fyre should add "[AFK]" to AFK members' nicknames (default: Yes).
-- `set-template`: A [message template](/templating/message-templates) to replace the default set (`/afk`) message.
-- `end-template`: A [message template](/templating/message-templates) to replace the default end (afk return) message.
-- `mention-template`: A [message template](/templating/message-templates) to replace the default afk mention message.
+- `enabled` - If the AFK module is enabled in the server (default: Yes).
+- `delete-set-replies-after` - How long to wait before deleting `/afk` command replies in seconds (default: Never, max: 60).
+- `delete-end-replies-after` - How long to wait before deleting afk return messages in seconds (default: Never, max: 60).
+- `delete-mention-replies-after` - How long to wait before deleting afk mention messages in seconds (default: 5, min: 2, max: 60).
+- `rename-afk-members` - If Fyre should add "[AFK]" to AFK members' nicknames (default: Yes).
+- `set-template` - A [message template](/templating/message-templates) to replace the default set (`/afk`) message.
+- `end-template` - A [message template](/templating/message-templates) to replace the default end (afk return) message.
+- `mention-template` - A [message template](/templating/message-templates) to replace the default afk mention message.
+
+
+## Staff Commands
+The following commands are plaintext only, and allow staff to manage VIP statuses for members.
+
+- `>unafk` - Will remove the target member's AFK status.
+- `>setafk` - Will set the target member's AFK status.
+
+These commands use the `utility.unafk` and `utility.setafk` permissions.

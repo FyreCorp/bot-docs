@@ -5,7 +5,7 @@ sidebarTitle: 'Managing'
 description: "Learn how to create, update, and delete ticket categories on Fyre."
 ---
 
-## Creating a Categories
+## Creating a Category
 To create a ticket category, use `/categories create`. This command supports the following options:
 
 - `name` - The name for the new ticket category (will be shown in related panels and in the `/open` command, max 32 chars).
@@ -49,16 +49,16 @@ Below is a list of each update command and what they're for.
 A list of general config options for ticket categories.
 You can update these options using `/categories update general`.
 
-- `enabled`: If the ticket category is enabled and tickets can be created (default: Yes).
-- `name`: The name of the ticket category (max 32 chars).
-- `emoji`: An emoji for the ticket category (shown in panels).
-- `colour`: The colour (HEX) of the ticket category (shown in embeds).
-- `description`: The description of the ticket category (max 100 chars).
+- `enabled` - If the ticket category is enabled and tickets can be created (default: Yes).
+- `name` - The name of the ticket category (max 32 chars).
+- `emoji` - An emoji for the ticket category (shown in panels).
+- `colour` - The colour (HEX) of the ticket category (shown in embeds).
+- `description` - The description of the ticket category (max 100 chars).
 
-- `server-category`: The category channel to create new tickets in.
-- `claiming`: If claiming is enabled in the ticket category (default: No).
-- `logs-channel`: The channel to send ticket logs and transcripts to (text only).
-- `button-colour`: The colour/style of the open button in ticket panels (default: Blue).
+- `server-category` - The category channel to create new tickets in.
+- `claiming` - If claiming is enabled in the ticket category (default: No).
+- `logs-channel` - The channel to send ticket logs and transcripts to (text only).
+- `button-colour` - The colour/style of the open button in ticket panels (default: Blue).
 
 
 ### Permission Options
@@ -82,34 +82,35 @@ Fyre has a few options for who can do what with tickets, here's the gist.
 
 <br/>
 
-- `owner-close-behaviour`: The [Close Behaviour](#close-behaviour) when the ticket owner tries to close the ticket (default: Request).
-- `staff-close-behaviour`: The [Close Behaviour](#close-behaviour) when a ticket staff tries to close the ticket (default: Close).
+- `owner-close-behaviour` - The [Close Behaviour](#close-behaviour) when the ticket owner tries to close the ticket (default: Request).
+- `staff-close-behaviour` - The [Close Behaviour](#close-behaviour) when a ticket staff tries to close the ticket (default: Close).
 
-- `who-can-move`: The [Who Can Action](#who-can-action) when a user tries to close a ticket (default: Staff).
-- `who-can-transfer`: The [Who Can Action](#who-can-action) when a user tries to transfer a ticket (default: Owner & Staff).
-- `who-can-manage-members`: The [Who Can Action](#who-can-action) when a user tries to add or remove members from a ticket (default: Owner & Staff).
+- `who-can-move` - The [Who Can Action](#who-can-action) when a user tries to close a ticket (default: Staff).
+- `who-can-transfer` - The [Who Can Action](#who-can-action) when a user tries to transfer a ticket (default: Owner & Staff).
+- `who-can-create-vc` - The [Who Can Action](#who-can-action) when a user tries to create a Ticket VC (default: Staff).
+- `who-can-manage-members` - The [Who Can Action](#who-can-action) when a user tries to add or remove members from a ticket (default: Owner & Staff).
 
-- `staff-bypass-max-tickets`: If staff are able to bypass the max amount of tickets per user in a category (default: Yes).
-- `staff-bypass-create-cooldown`: If staff are able to bypass the ticket creation cooldown in a category (default: No).
+- `staff-bypass-max-tickets` - If staff are able to bypass the max amount of tickets per user in a category (default: Yes).
+- `staff-bypass-create-cooldown` - If staff are able to bypass the ticket creation cooldown in a category (default: No).
 
 
 ### Advanced Options
 A list of advanced config options for ticket categories.
 You can update these options using `/categories update advanced`.
 
-- `cooldown`: The cooldown to create tickets per user in seconds for a category (default: 30).
-- `nsfw`: If new ticket channels should be age-restricted by default (default: No).
-- `send-owner-transcript`: If ticket transcripts should be DMed to the owner when a ticket is closed (default: Yes).
-- `close-on-leave`: If tickets should automatically close when the ticket owner leaves the server (default: No).
+- `cooldown` - The cooldown to create tickets per user in seconds for a category (default: 30).
+- `nsfw` - If new ticket channels should be age-restricted by default (default: No).
+- `send-owner-transcript` - If ticket transcripts should be DMed to the owner when a ticket is closed (default: No).
+- `close-on-leave` - If tickets should automatically close when the ticket owner leaves the server (default: No).
 
-- `default-name-format`: The default channel name format for new tickets
+- `default-name-format` - The default channel name format for new tickets
 (supports [ticket variables](/misc/variables#ticket-channel-name-variables). default: ticket-\{username\}).
 
-- `claimed-name-format`: The channel name format for when a ticket is claimed
+- `claimed-name-format` - The channel name format for when a ticket is claimed
 (supports [ticket variables](/misc/variables#ticket-channel-name-variables). default: none).
 
-- `max-tickets-user`: The maximum amount of tickets per user in a category (default: 1).
-- `max-tickets-category`: The maximum amount of tickets total in a category (default: Infinite).
+- `max-tickets-user` - The maximum amount of tickets per user in a category (default: 1).
+- `max-tickets-category` - The maximum amount of tickets total in a category (default: Infinite).
 
 
 ## Deleting Categories
