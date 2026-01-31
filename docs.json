@@ -46,6 +46,10 @@
 				"pages": ["basics/syntax", "basics/utilities", "basics/permissions"]
 			},
 			{
+				"group": "User Guides",
+				"pages": ["users/vip"]
+			},
+			{
 				"group": "Modules",
 				"pages": [
 					"modules/vip",
