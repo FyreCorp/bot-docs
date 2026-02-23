@@ -26,12 +26,16 @@ Each form can have up to 25 questions, here's how to add, update, and remove que
 To add a question to a form, use `/forms questions add`. This command supports the following options:
 
 - `form` - The form ID to add a question to (autocomplete).
-- `name` - The name of the question (max 100 chars).
-- `style` - The style of the question (Short or Paragraph).
+- `name` - The name of the question (max 45 chars).
+- `type` - The type of question to add (text or select).
 - `required` - If the question is required (Yes or No).
-- `min-length` - The minimum length of the question's answer.
-- `max-length` - The maximum length of the question's answer.
+- `style` - The style of the question (Short or Paragraph).
+- `description` - The description of the question (max 100 chars).
 - `placeholder` - A placeholder answer for the question (max 100 chars).
+- `choices` - A comma separated list of choices for select questions (max 25 choices).
+- `min-length` - The minimum length of the question answer.
+- `max-length` - The maximum length of the question answer.
+- `allow-multiple-choices` - If multiple choices should be allowed for select questions (default: No).
 
 To update a question, use `/forms questions update`. This command supports the same options as above.
 
@@ -92,12 +96,7 @@ To create a form panel, use `/forms create-panel`. This command supports the fol
 - `button-name` - The name of the button if you're making a one button panel.
 - `select-menu-placeholder` - The placeholder text in the select menu if you're making a select menu panel.
 
-After using this command, a modal will popup allowing you to enter a template for the form panel.
-Form panels don't support any template variables.
+After using this command, a modal will popup allowing you to
+select form categories and enter a template for the form panel.
+Form panels only support [guild template variables](/templating/variables#guild%2Fserver-variables)
 
-![Form Admin Create Panel Template Example](/screenshots/forms/admin-create-panel-template.png)
-
-After entering your template code, you'll be shown a select menu where you can choose up to 5 forms to link to this panel.
-If you need to expose more than 5 forms, use multiple panels.
-
-![Form Admin Create Panel Selector Example](/screenshots/forms/admin-create-panel-selector.png)

@@ -64,7 +64,6 @@
 					"modules/auto-thread",
 					"modules/time",
 					"modules/auto-responder",
-					"modules/lock",
 					"modules/member-backup",
 					"modules/media",
 					"modules/auto-react",

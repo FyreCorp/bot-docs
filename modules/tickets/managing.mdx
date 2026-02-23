@@ -23,11 +23,20 @@ This command supports the following options:
 
 - `category` - The category ID to add the question to (autocomplete).
 - `name` - The name of the question (max 45 chars).
+- `type` - The type of question to add (text, select, or user).
+- `required` - If the question is required (Yes or No).
 - `style` - The style of the question (Short or Paragraph).
-- `required` - If the question is required (Yes or No, default: Yes).
+- `description` - The description of the question (max 100 chars).
+- `placeholder` - A placeholder answer for the question (max 100 chars).
+- `choices` - A comma separated list of choices for select questions (max 25 choices).
 - `min-length` - The minimum length of the question answer.
 - `max-length` - The maximum length of the question answer.
-- `placeholder` - A placeholder answer for the question (max 100 chars).
+- `allow-multiple-choices` - If multiple choices should be allowed for select questions (default: No).
+
+#### User Question Type
+The user question type is a special version of a text question.
+Members can provide a user ID, or the username of a member in your server,
+and Fyre will automatically resolve the target user, and send their info in the ticket.
 
 ### Update a Question
 To update a question in a ticket category, use `/categories questions update`.
