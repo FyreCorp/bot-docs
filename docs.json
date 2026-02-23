@@ -25,6 +25,13 @@
 			"og:site_name": "Fyre Bot Docs"
 		}
 	},
+	"errors": {
+		"404": {
+			"title": "You've found a glitch in the matrix",
+			"redirect": false,
+			"description": "This page doesn't exist yet, or it doesn't exist anymore. [Tap/click here](/) to go back."
+		}
+	},
 	"navigation": {
 		"global": {
 			"anchors": [
@@ -34,7 +41,7 @@
 					"href": "https://discord.com/oauth2/authorize?client_id=1350451983022166158"
 				},
 				{
-					"icon": "message-circle-question-mark",
+					"icon": "discord",
 					"anchor": "Discord Server",
 					"href": "https://discord.gg/SNxqD4ujTF"
 				}
@@ -42,14 +49,23 @@
 		},
 		"groups": [
 			{
+				"icon": "rocket",
 				"group": "The Basics",
-				"pages": ["basics/syntax", "basics/utilities", "basics/permissions"]
+				"pages": [
+					"basics/syntax",
+					"basics/utilities",
+					"basics/permissions"
+				]
 			},
 			{
+				"icon": "user-round-check",
 				"group": "User Guides",
-				"pages": ["users/vip"]
+				"pages": [
+					"users/vip"
+				]
 			},
 			{
+				"icon": "settings",
 				"group": "Modules",
 				"pages": [
 					"modules/vip",
@@ -75,22 +91,37 @@
 				]
 			},
 			{
+				"icon": "message-circle-code",
 				"group": "Templating",
-				"pages": ["templating/syntax", "templating/variables", "templating/message-templates", "templating/defaults"]
+				"pages": [
+					"templating/syntax",
+					"templating/variables",
+					"templating/message-templates",
+					"templating/defaults"
+				]
 			},
 			{
+				"icon": "zap",
 				"group": "Miscellaneous",
-				"pages": ["misc/automation"]
+				"pages": [
+					"misc/automation"
+				]
 			},
 			{
+				"icon": "gavel",
 				"group": "Legal",
-				"pages": ["legal/terms", "legal/privacy", "legal/orders"]
+				"pages": [
+					"legal/terms",
+					"legal/privacy",
+					"legal/orders"
+				]
 			}
 		]
 	},
 	"footer": {
 		"socials": {
-			"github": "https://github.com/FyreCorp"
+			"github": "https://github.com/FyreCorp",
+			"discord": "https://discord.gg/SNxqD4ujTF"
 		}
 	}
 }
