@@ -11,7 +11,7 @@ import { FeatureCard } from './snippets/FeatureCard.jsx';
     <section id="hero" className="flex flex-col min-h-screen relative overflow-hidden">
         {/* <div className="absolute inset-0 rounded-full gradient-bg opacity-10"/>
         <div className="absolute inset-0 radial-gradient-bg from-cyan-600/40 via-black to-black"/> */}
-        <div className="max-w-8xl mx-auto">
+        <div className="max-w-8xl">
             <div className="relative min-w-0 mx-auto px-4 pt-32 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-8 text-center lg:text-left mt-16 lg:mt-0">
@@ -55,7 +55,7 @@ import { FeatureCard } from './snippets/FeatureCard.jsx';
             <Icon icon="move-down" size={24}/>
         </a>
     </section>
-    <section id="features" className="relative mx-auto max-w-8xl">
+    <section id="features" className="max-w-8xl">
         <div className="min-w-0 mx-auto px-4 lg:px-12">
             <Header
                 title="Fyre Bot's Features"
@@ -119,20 +119,26 @@ import { FeatureCard } from './snippets/FeatureCard.jsx';
             </div>
         </div>
     </section>
-    <section id="testimonials" className="mx-auto max-w-8xl">
-        <div className="min-w-0 mt-40 mx-auto px-4 lg:px-12">
+    <section id="testimonials" className="mt-40 max-w-8xl">
+        <div className="min-w-0 mx-auto px-4 lg:px-12">
             <Header
                 title="What our users say"
                 description="Some random testimonials and shit and other stuff because yes we're super cool."
             />
             <div className="flex flex-col">
-                <div className="flex h-full min-h-56 flex-col p-8 gap-8 rounded-2xl justify-between feature-card shine-effect">
-                    <span id="testimonial-message" className="text-lg">"Fyre is a super duper cool bot that I really love and it has good features, good commands, shit yes yes lol."</span>
-                    <div className="flex flex-row items-center">
-                        <img src={'https://cdn.discordapp.com/avatars/738746238874419220/a_b8d713e5a47e2026fe3b3d4cc30215e5.gif'} alt={'aa'} className="w-12 h-12 mr-4 rounded-full"/>
-                        <div className="flex flex-col">
-                            <p id="testimonial-author" className="text-gray-200">aaa</p>
-                            <span id="testimonial-position" className="text-sm text-gray-400"/>
+                <div className="flex h-full min-h-56 flex-col p-8 gap-8 rounded-2xl justify-between testimonial-card shine-effect">
+                    <span id="testimonial-message" className="text-lg"/>
+                    <div className="flex flex-row justify-between">
+                        <div className="flex flex-row items-center">
+                            <img id="testimonial-author-avatar" className="w-10 h-10 mr-4 rounded-full"/>
+                            <div className="flex flex-col">
+                                <span id="testimonial-author-name" className="text-gray-200"/>
+                                <span id="testimonial-author-position" className="text-sm text-gray-400"/>
+                            </div>
+                        </div>
+                        <div className="flex-row items-center hidden md:flex">
+                            <span id="testimonial-guild-name" className="text-gray-200"/>
+                            <img id="testimonial-guild-icon" className="w-10 h-10 ml-4 rounded-full"/>
                         </div>
                     </div>
                 </div>
@@ -140,10 +146,27 @@ import { FeatureCard } from './snippets/FeatureCard.jsx';
                     <button id="prev-testimonial" className="p-2 icon-button rounded-2xl shine-effect">
                         <Icon icon="chevron-left" size={32}/>
                     </button>
+                    <span id="testimonial-index" className="px-4 flex icon-button rounded-2xl items-center">
+                        1/1
+                    </span>
                     <button id="next-testimonial" className="p-2 icon-button rounded-2xl shine-effect">
                         <Icon icon="chevron-right" size={32}/>
                     </button>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer" className="mt-4 max-w-8xl">
+        <div className="px-4 lg:px-12">
+            <div className="flex py-4 border-t-2 border-white/20 items-center justify-center">
+                <span>
+                    Copyright © 2026 Fyre Bot &bull; Design by
+                    <a
+                        href="https://github.com/RedolentHalo/discord-bot-website-template"
+                        target="_blank"
+                        className="underline"
+                    > RedolentHalo</a>
+                </span>
             </div>
         </div>
     </section>
