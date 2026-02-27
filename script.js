@@ -72,7 +72,8 @@ setTimeout(() => {
         nextTestimonial();
         resetAutoSlide();
     });
+    
+    renderTestimonial(0);
+}, 250);
 
-    renderTestimonial(index);
-    startAutoSlide();
-}, 5000);
+startAutoSlide();
